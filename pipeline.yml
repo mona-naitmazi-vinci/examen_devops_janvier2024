@@ -27,6 +27,9 @@ jobs:
       - name: Run ESLint and Prettier
         run: npm run code:fix
 
+      - name: npm install and build
+        run: npm run build
+        
       - name: Install Jest and Run Tests
         run: |
           npm install jest
