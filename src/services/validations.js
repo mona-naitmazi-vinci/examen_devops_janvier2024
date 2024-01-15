@@ -6,7 +6,7 @@ const isValid = (gamerTag) => {
     const searchNumbers = ["1", "0", "2", "3", "4", "5", "6", "7", "8", "9"];
     const containsNumbers = searchNumbers.every(num => gamerTag.includes(num));
 
-    if(gamerTag.length()  < 8 || !containsChars || !containsNumbers){
+    if(gamerTag.length < 8 || !containsChars || !containsNumbers){
         return false; 
     }
 
@@ -20,7 +20,7 @@ const sendMessage = (gamerTag) => {
     const searchNumbers = ["1", "0", "2", "3", "4", "5", "6", "7", "8", "9"];
     const containsNumbers = searchNumbers.every(num => gamerTag.includes(num));
 
-    if(gamerTag.length()  < 8){
+    if(gamerTag.length < 8){
         return "Invalid - gamertag length must be at least 8 characters";
     }else if(!containsChars){
         return "Invalid - gamertag must contain at least a special character";
