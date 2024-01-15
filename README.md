@@ -40,4 +40,5 @@ This has been built with the version 18.18 of Node JS
 ### Exam information - to be completed
 - Student (Lastname and Firstname) : Mona Naït Mazi
 - Azure repository URL :
-- Azure Static Web app URL : 
+- Azure Static Web app URL :
+- GitHub repository URL : https://github.com/mona-naitmazi-vinci/examen_devops_janvier2024/compare/main...features
