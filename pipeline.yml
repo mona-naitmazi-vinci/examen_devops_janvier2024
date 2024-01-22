@@ -1,0 +1,37 @@
+name: Build and Test
+
+on:
+  pull request:
+    branches:
+      - 'main' # Trigger on the branch main
+  merge request:
+   branches:
+       - 'main'
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run ESLint and Prettier
+        run: npm run code:fix
+
+      - name: npm install and build
+        run: npm run build
+        
+      - name: Install Jest and Run Tests
+        run: |
+          npm install jest
+          npm test
+

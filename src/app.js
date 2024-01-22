@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 try {
-    const { isValid } = require('./services/validations');
+    const { isValid, sendMessage } = require('./services/validations');
 
     const body = document.getElementById('body');
 
@@ -38,9 +38,10 @@ try {
 
     checkButton.addEventListener('click', () => {
         const validationResult = isValid(gamerTagValue);
+        const message = sendMessage(gamerTagValue);
         // TODO : Define the correct error message regarding the validation rules
         feedbackMessage.textContent = validationResult
-            ? 'Gamer tag is not valid'
+            ? message
             : 'Gamer tag is valid';
         // ----------------------------------------------------------------------
         body.setAttribute(
